@@ -1,0 +1,112 @@
+//// Each team member's name and contributions ////////////
+Team member #1: Don-Thuan Le
+Contributions: Main author of FileSys.cpp and worked with Sultan on the server.cpp
+
+Team member #2: Sultan Alneif
+Contributions: Main author of Shell.cpp and worked with Don on server.cpp
+
+...
+
+
+
+
+//// My own rating on the functionality ///////////////////
+Rating: B
+Explanation: The overall design of the code is not good because it is written very intuitively and with little finesse to how it should be designed. This lead to bulkiness in the code and this most likely created code that was not optimized to be the best and with a higher time complexity.
+
+Program has some faulty functions that are not working properly: cat and rm do not work as they should and rmdir does not check if the directory is not empty 
+...
+
+
+
+
+//// Test cases ///////////////////////////////////////////
+Test case #1: ls
+Results: Empty Directory
+
+Test case #2: mkdir dir1
+Results: 200 OK
+
+Test case #2: mkdir dir2
+Results: 200 OK
+
+
+Test case #3:ls
+Results: dir1/ dir2/
+
+Test case #4: cd dir1
+Results: 200 OK
+
+Test case #5: create file1
+Results: 200 OK
+
+Test case #6: append file1 helloworld!
+Results: 200 OK
+
+Test case #7: stat file1
+Results: 200 OK
+Length:75
+Inode block: 6
+Bytes in the file: 0
+Number of blocks: 1
+First block: 4564
+
+
+Test case #8: ls
+Results: file1
+
+Test case #9: cat file1
+Results: seg fault
+
+Test case #10: head file1 5
+Results: 200 OK
+Length:5
+hello
+
+Test case #11: rm file2
+Results: 503 File does not exist
+
+Test case #12: cat file2
+Results: seg fault
+
+Test case #12: create file1
+Results: 502 File exits
+
+Test case #13: create file2
+Results: 200 OK
+
+Test case #14: rm file1
+Results: 503 File does not exist
+
+Test case #15: ls
+Result: file1 file2 
+
+Test case #16: home
+Results: 200 OK
+
+Test case #17: ls
+Results: dir1/ dir2/
+
+Test case #18: home
+Results: success
+
+Test case #19: stat dir1
+Results: 200 OK
+Length:42
+Directory name:  dir1
+Directory block: 2
+
+Test case #20: rmdir dir3
+Results: 503 File does not exist
+
+test case #21: rmdir dir1
+Results: 200 OK
+
+test case #22: rmdir dir2
+Results: 200 OK
+
+Test case #23: ls
+Results: Empty Directory
+
+
+
